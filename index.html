@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+	<script>
+        (function() {
+	    if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
+	        var msViewportStyle = document.createElement("style");
+	        msViewportStyle.appendChild(
+	            document.createTextNode("@-ms-viewport{width:auto!important}")
+	        );
+	        document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+	    }
+	})();
+	</script>
+	<title>App Framework</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />    
+    <link rel="stylesheet" type="text/css" href="css/src/main.css"  />
+	<link rel="stylesheet" type="text/css" href="css/src/appframework.css"  />
+	<link rel="stylesheet" type="text/css" href="css/src/badges.css"  />
+	<link rel="stylesheet" type="text/css" href="css/src/buttons.css"  />
+	<link rel="stylesheet" type="text/css" href="css/src/lists.css"  />
+	<link rel="stylesheet" type="text/css" href="css/src/forms.css"  />
+	<link rel="stylesheet" type="text/css" href="css/src/grid.css"  />
+	<script type="text/javascript" charset="utf-8" src="./appframework.min.js"></script>
+
+
+	<script type="text/javascript" charset="utf-8" src="./plugins/af.actionsheet.js"></script>
+         <script type="text/javascript" charset="utf-8" src="./plugins/af.css3animate.js"></script>
+         <script type="text/javascript" charset="utf-8" src="./plugins/af.passwordBox.js"></script>
+          <script type="text/javascript" charset="utf-8" src="./plugins/af.scroller.js"></script>
+           <script type="text/javascript" charset="utf-8" src="./plugins/af.selectBox.js"></script>
+            <script type="text/javascript" charset="utf-8" src="./plugins/af.touchEvents.js"></script>
+          <script type="text/javascript" charset="utf-8" src="./plugins/af.touchLayer.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.popup.js"></script>
+
+	<script type="text/javascript" charset="utf-8" src="./ui/src/appframework.ui.js"></script>
+
+	<script type="text/javascript" charset="utf-8" src="./ui/transitions/fade.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/flip.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/pop.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slide.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slideDown.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slideUp.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.slidemenu.js"></script>
+</head>
+<body>
+	<div id="afui">
+		<div id="header">
+			<a id="backButton" href="javascript:;" class="button" style="visibility: hidden; ">Back</a>
+		    <h1 id="pageTitle">Page Title</h1>
+		</div>
+		<div id="content">
+	        <div id="main" title="Welcome" class="panel" selected="true" data-nav="main_nav" data-tab="navbar_home">
+					default panel content
+	        </div>
+		</div>
+		<div id="navbar">
+	       <a target="#welcome" class="icon home">Home</a>
+	       <a target="#main" class="icon user">User</a>
+	       <a target="#main" class="icon chat">Chat</a>
+	       <a target="#main" class="icon settings">Settings</a>
+	    </div>
+	    <nav id="main_nav">
+	        <div class='title'>Home</div>
+	        <ul>
+	            <li ><a class="icon home mini" href="#main">Home</a></li>
+	        </ul>
+	    </nav>
+	</div>
+</body>
+</html>
