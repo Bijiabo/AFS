@@ -19,13 +19,14 @@
     <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" type="text/css" href="css/icons.css" />    
-    <link rel="stylesheet" type="text/css" href="css/src/main.css"  />
+    <!-- <link rel="stylesheet" type="text/css" href="css/src/main.css"  /> -->
 	<link rel="stylesheet" type="text/css" href="css/src/appframework.css"  />
 	<link rel="stylesheet" type="text/css" href="css/src/badges.css"  />
 	<link rel="stylesheet" type="text/css" href="css/src/buttons.css"  />
 	<link rel="stylesheet" type="text/css" href="css/src/lists.css"  />
 	<link rel="stylesheet" type="text/css" href="css/src/forms.css"  />
 	<link rel="stylesheet" type="text/css" href="css/src/grid.css"  />
+	<link rel="stylesheet" type="text/css" href="css/custom/af.ui.green.css">
 	<script type="text/javascript" charset="utf-8" src="./appframework.min.js"></script>
 
 
@@ -79,13 +80,18 @@
 	<div id="afui">
 		<div id="header">
 			<a id="backButton" href="javascript:;" class="button" style="visibility: hidden; ">Back</a>
-		    <h1 id="pageTitle">Page Title</h1>
+		    <h1 id="pageTitle">Loading...</h1>
 		    <a id="menubadge" onclick="af.ui.toggleSideMenu()" class="menuButton pressed" style="float: left;"></a>
 		</div>
 		<div id="content">
-	        <div id="main" title="Home" class="panel" selected="true">
+	        <div id="main" title="AFS" class="panel" selected="true" data-defer="ajax/microblog.html">
 					<h1>Hello world:)</h1>
 					<p>This is the home page.</p>
+					<script type="text/javascript">
+					$(function(){
+						// $.ui.loadContent("ajax/microblog.html");
+					})
+					</script>
 	        </div>
 	        <div id="friends" title="Friends" class="panel">
 					user panel content:user:)
