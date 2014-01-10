@@ -19,7 +19,7 @@
     <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" type="text/css" href="css/icons.css" />    
-    <!-- <link rel="stylesheet" type="text/css" href="css/src/main.css"  /> -->
+    <link rel="stylesheet" type="text/css" href="css/src/main.css"  />
 	<link rel="stylesheet" type="text/css" href="css/src/appframework.css"  />
 	<link rel="stylesheet" type="text/css" href="css/src/badges.css"  />
 	<link rel="stylesheet" type="text/css" href="css/src/buttons.css"  />
@@ -84,23 +84,18 @@
 		    <a id="menubadge" onclick="af.ui.toggleSideMenu()" class="menuButton pressed" style="float: left;"></a>
 		</div>
 		<div id="content">
-	        <div id="main" title="AFS" class="panel" selected="true" data-defer="ajax/microblog.html">
+	        <div id="main" title="AFS" class="panel" selected="true" data-defer="ajax/microblog.html" data-tab="navbar-home">
 					<h1>Hello world:)</h1>
 					<p>This is the home page.</p>
-					<script type="text/javascript">
-					$(function(){
-						// $.ui.loadContent("ajax/microblog.html");
-					})
-					</script>
 	        </div>
-	        <div id="friends" title="Friends" class="panel">
+	        <div id="friends" title="Friends" class="panel" data-defer="ajax/friends.html">
 					user panel content:user:)
 	        </div>
 		</div>
 		<div id="navbar">
-	       <a href="#main" class="icon home">Home</a>
+	       <a href="#main" class="icon home" data-transition="fade" id="navbar-home">Home</a>
 	       <a href="#friends" class="icon user">Friends</a>
-	       <a href="#main" class="icon chat">Chat</a>
+	       <a href="ajax/microblog.html" title="Chat" class="icon chat" data-refresh-ajax="true">Chat</a>
 	       <a href="#main" class="icon settings">Settings</a>
 	    </div>
 	    <nav id="main_nav">
