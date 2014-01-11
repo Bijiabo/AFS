@@ -5,6 +5,10 @@
 #microblog-list{
 	margin-top: 14px;
 }
+.microblog-list-a{
+	color: #555;
+	text-decoration: none;
+}
 /*microblog-item*/
 .microblog-item{
 	background-color: white;
@@ -216,325 +220,58 @@ to {bottom: 0;}
 </style>
 
 <div id="microblog-list">
-	<div class="microblog-item">
-		<!-- header -->
-		<div class="media m-i-header">
-			<div class="pull-left m-i-h-avatar">
-				<img class="media-object m-i-h-a-img" src="
-					data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC
-				">
-			</div>
-			<div class="media-body m-i-h-info">
-					<div class="m-i-h-i-l-name">蜂畀</div>
-					<div class="m-i-h-i-l-description">来自Android客户端 下午4:13</div>
-			</div>
-			<div class="m-i-h-right">
-				<div class="m-i-h-i-r-digg" num="0">
-					<span class="glyphicon glyphicon-thumbs-up"></span>
-					<span class="m-i-h-i-d-num">0</span>
+	<a href="ajax/detail.html" class="microblog-list-a" data-persist-ajax="true" title="detail">
+		<div class="microblog-item">
+			<!-- header -->
+			<div class="media m-i-header">
+				<div class="pull-left m-i-h-avatar">
+					<img class="media-object m-i-h-a-img" src="
+						data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC
+					">
+				</div>
+				<div class="media-body m-i-h-info">
+						<div class="m-i-h-i-l-name">蜂畀</div>
+						<div class="m-i-h-i-l-description">来自Android客户端 下午4:13</div>
+				</div>
+				<div class="m-i-h-right">
+					<div class="m-i-h-i-r-digg" num="0">
+						<span class="glyphicon glyphicon-thumbs-up"></span>
+						<span class="m-i-h-i-d-num">0</span>
+					</div>
 				</div>
 			</div>
-		</div>
-		<!-- body -->
-		<div class="m-i-body">
-			<p class="m-i-b-p" style="margin:15px 20px 10px 20px;">
-				冈比亚闪电宣布与台湾断交，台湾外交部次长柯森耀表示，对于冈比亚的决定，中华民国政府感到震惊与遗憾，且已经透过适当管道传达。
-			</p>
-		</div>
-		<!-- footer -->
-		<div class="m-i-footer">
-			<div class="m-i-f-info">
-				转发39 |  评论119
+			<!-- body -->
+			<div class="m-i-body">
+				<p class="m-i-b-p" style="margin:15px 20px 10px 20px;">
+					冈比亚闪电宣布与台湾断交，台湾外交部次长柯森耀表示，对于冈比亚的决定，中华民国政府感到震惊与遗憾，且已经透过适当管道传达。
+				</p>
 			</div>
-			<!-- <div class="m-i-f-btnbox">
-				<div class="m-i-f-b-info">
+			<!-- footer -->
+			<div class="m-i-footer">
+				<div class="m-i-f-info">
 					转发39 |  评论119
 				</div>
-				<div class="m-i-f-b-btns">
-					<div class="m-i-f-b-b-like">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-heart"></span>
-						</span>
-						喜欢
-					</div>
-					<div class="m-i-f-b-b-reponse">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-share-alt"></span>
-						</span>
-						回复
-					</div>
-					<div class="m-i-f-b-b-retweet">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-retweet"></span>
-						</span>
-						转发
-					</div>
-					<div class="m-i-f-b-b-more">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-plus"></span>
-						</span>
-						更多
-					</div>
-				</div>
-			</div> -->
+			</div>
 		</div>
-	</div>
+	</a>
 
-	<div class="microblog-item">
-		<!-- header -->
-		<div class="media m-i-header">
-			<div class="pull-left m-i-h-avatar">
-				<img class="media-object m-i-h-a-img" src="
-					data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC
-				">
-			</div>
-			<div class="media-body m-i-h-info">
-					<div class="m-i-h-i-l-name">蜂畀</div>
-					<div class="m-i-h-i-l-description">来自Android客户端 下午4:13</div>
-			</div>
-			<div class="m-i-h-right">
-				<div class="m-i-h-i-r-digg" num="0">
-					<span class="glyphicon glyphicon-thumbs-up"></span>
-					<span class="m-i-h-i-d-num">0</span>
-				</div>
-			</div>
-		</div>
-		<!-- body -->
-		<div class="m-i-body">
-			<p class="m-i-b-p" style="margin:15px 20px 10px 20px;">
-				冈比亚闪电宣布与台湾断交，台湾外交部次长柯森耀表示，对于冈比亚的决定，中华民国政府感到震惊与遗憾，且已经透过适当管道传达。
-			</p>
-		</div>
-		<!-- footer -->
-		<div class="m-i-footer">
-			<div class="m-i-f-info">
-				转发39 |  评论119
-			</div>
-			<!-- <div class="m-i-f-btnbox">
-				<div class="m-i-f-b-info">
-					转发39 |  评论119
-				</div>
-				<div class="m-i-f-b-btns">
-					<div class="m-i-f-b-b-like">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-heart"></span>
-						</span>
-						喜欢
-					</div>
-					<div class="m-i-f-b-b-reponse">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-share-alt"></span>
-						</span>
-						回复
-					</div>
-					<div class="m-i-f-b-b-retweet">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-retweet"></span>
-						</span>
-						转发
-					</div>
-					<div class="m-i-f-b-b-more">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-plus"></span>
-						</span>
-						更多
-					</div>
-				</div>
-			</div> -->
-		</div>
-	</div>
+	<a href="ajax/detail.html" class="microblog-list-a" data-persist-ajax="true" title="detail"><div class="microblog-item"><div class="media m-i-header"><div class="pull-left m-i-h-avatar"><img class="media-object m-i-h-a-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC"></div><div class="media-body m-i-h-info"><div class="m-i-h-i-l-name">蜂畀</div><div class="m-i-h-i-l-description">来自Android客户端 下午4:13</div></div><div class="m-i-h-right"><div class="m-i-h-i-r-digg" num="0"><span class="glyphicon glyphicon-thumbs-up"></span><span class="m-i-h-i-d-num">0</span></div></div></div><div class="m-i-body"><p class="m-i-b-p" style="margin:15px 20px 10px 20px;">私密社交应用 Path 刚刚完成一轮 2500 万美元的融资，Bakrie Global Group 领投了本轮融资，Greylock Partners、Kleiner Perkins 和 Index Ventures 等参与了本轮融资。至此，Path 的融资总额已达 6500 万美元。</p></div><div class="m-i-footer"><div class="m-i-f-info">转发39 | 评论119</div></div></div></a>
 
-	<div class="microblog-item">
-		<!-- header -->
-		<div class="media m-i-header">
-			<div class="pull-left m-i-h-avatar">
-				<img class="media-object m-i-h-a-img" src="
-					data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC
-				">
-			</div>
-			<div class="media-body m-i-h-info">
-					<div class="m-i-h-i-l-name">蜂畀</div>
-					<div class="m-i-h-i-l-description">来自Android客户端 下午4:13</div>
-			</div>
-			<div class="m-i-h-right">
-				<div class="m-i-h-i-r-digg" num="0">
-					<span class="glyphicon glyphicon-thumbs-up"></span>
-					<span class="m-i-h-i-d-num">0</span>
-				</div>
-			</div>
-		</div>
-		<!-- body -->
-		<div class="m-i-body">
-			<p class="m-i-b-p" style="margin:15px 20px 10px 20px;">
-				冈比亚闪电宣布与台湾断交，台湾外交部次长柯森耀表示，对于冈比亚的决定，中华民国政府感到震惊与遗憾，且已经透过适当管道传达。
-			</p>
-		</div>
-		<!-- footer -->
-		<div class="m-i-footer">
-			<div class="m-i-f-info">
-				转发39 |  评论119
-			</div>
-			<!-- <div class="m-i-f-btnbox">
-				<div class="m-i-f-b-info">
-					转发39 |  评论119
-				</div>
-				<div class="m-i-f-b-btns">
-					<div class="m-i-f-b-b-like">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-heart"></span>
-						</span>
-						喜欢
-					</div>
-					<div class="m-i-f-b-b-reponse">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-share-alt"></span>
-						</span>
-						回复
-					</div>
-					<div class="m-i-f-b-b-retweet">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-retweet"></span>
-						</span>
-						转发
-					</div>
-					<div class="m-i-f-b-b-more">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-plus"></span>
-						</span>
-						更多
-					</div>
-				</div>
-			</div> -->
-		</div>
-	</div>
+	<a href="ajax/detail.html" class="microblog-list-a" data-persist-ajax="true" title="detail"><div class="microblog-item"><div class="media m-i-header"><div class="pull-left m-i-h-avatar"><img class="media-object m-i-h-a-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC"></div><div class="media-body m-i-h-info"><div class="m-i-h-i-l-name">蜂畀</div><div class="m-i-h-i-l-description">来自Android客户端 下午4:13</div></div><div class="m-i-h-right"><div class="m-i-h-i-r-digg" num="0"><span class="glyphicon glyphicon-thumbs-up"></span><span class="m-i-h-i-d-num">0</span></div></div></div><div class="m-i-body"><img src="img/microblog/02.jpg" style="width:100%;"><p class="m-i-b-p" style="margin:15px 20px 10px 20px;">Engadget 内部评出了本次 CES 上的各项最佳产品，其中最佳创业公司是 Airtame，它支持多系统，可以直接通过 Wi-Fi 来在电脑与屏幕之间传输影像信息。除了连接屏幕用的 Dongle 拇指棒外，你只需要在电脑上面安装一个专用的 app，即可无线镜射到多颗屏幕之上。</p></div><div class="m-i-footer"><div class="m-i-f-info">转发39 | 评论119</div></div></div></a>
+	
+	<a href="ajax/detail.html" class="microblog-list-a" data-persist-ajax="true" title="detail"><div class="microblog-item"><div class="media m-i-header"><div class="pull-left m-i-h-avatar"><img class="media-object m-i-h-a-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC"></div><div class="media-body m-i-h-info"><div class="m-i-h-i-l-name">蜂畀</div><div class="m-i-h-i-l-description">来自Android客户端 下午4:13</div></div><div class="m-i-h-right"><div class="m-i-h-i-r-digg" num="0"><span class="glyphicon glyphicon-thumbs-up"></span><span class="m-i-h-i-d-num">0</span></div></div></div><div class="m-i-body"><p class="m-i-b-p" style="margin:15px 20px 10px 20px;">黑莓发言人 Adam Emery 近日在 CES 大会上证实，已停止寻找 CEO 人选工作，将临时 CEO 程守宗转正，直到黑莓在财务和战略上恢复稳定状态后，程守宗才会考虑是否离开。分析师认为，此举系稳定黑莓在资本市场的信心。</p></div><div class="m-i-footer"><div class="m-i-f-info">转发39 | 评论119</div></div></div></a>
 
-	<div class="microblog-item">
-		<!-- header -->
-		<div class="media m-i-header">
-			<div class="pull-left m-i-h-avatar">
-				<img class="media-object m-i-h-a-img" src="
-					data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC
-				">
-			</div>
-			<div class="media-body m-i-h-info">
-					<div class="m-i-h-i-l-name">蜂畀</div>
-					<div class="m-i-h-i-l-description">来自Android客户端 下午4:13</div>
-			</div>
-			<div class="m-i-h-right">
-				<div class="m-i-h-i-r-digg" num="0">
-					<span class="glyphicon glyphicon-thumbs-up"></span>
-					<span class="m-i-h-i-d-num">0</span>
-				</div>
-			</div>
-		</div>
-		<!-- body -->
-		<div class="m-i-body">
-			<p class="m-i-b-p" style="margin:15px 20px 10px 20px;">
-				冈比亚闪电宣布与台湾断交，台湾外交部次长柯森耀表示，对于冈比亚的决定，中华民国政府感到震惊与遗憾，且已经透过适当管道传达。
-			</p>
-		</div>
-		<!-- footer -->
-		<div class="m-i-footer">
-			<div class="m-i-f-info">
-				转发39 |  评论119
-			</div>
-			<!-- <div class="m-i-f-btnbox">
-				<div class="m-i-f-b-info">
-					转发39 |  评论119
-				</div>
-				<div class="m-i-f-b-btns">
-					<div class="m-i-f-b-b-like">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-heart"></span>
-						</span>
-						喜欢
-					</div>
-					<div class="m-i-f-b-b-reponse">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-share-alt"></span>
-						</span>
-						回复
-					</div>
-					<div class="m-i-f-b-b-retweet">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-retweet"></span>
-						</span>
-						转发
-					</div>
-					<div class="m-i-f-b-b-more">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-plus"></span>
-						</span>
-						更多
-					</div>
-				</div>
-			</div> -->
-		</div>
-	</div>
 
-	<div class="microblog-item">
-		<!-- header -->
-		<div class="media m-i-header">
-			<div class="pull-left m-i-h-avatar">
-				<img class="media-object m-i-h-a-img" src="
-					data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC
-				">
-			</div>
-			<div class="media-body m-i-h-info">
-					<div class="m-i-h-i-l-name">蜂畀</div>
-					<div class="m-i-h-i-l-description">来自Android客户端 下午4:13</div>
-			</div>
-			<div class="m-i-h-right">
-				<div class="m-i-h-i-r-digg" num="0">
-					<span class="glyphicon glyphicon-thumbs-up"></span>
-					<span class="m-i-h-i-d-num">0</span>
-				</div>
-			</div>
-		</div>
-		<!-- body -->
-		<div class="m-i-body">
-			<p class="m-i-b-p" style="margin:15px 20px 10px 20px;">
-				冈比亚闪电宣布与台湾断交，台湾外交部次长柯森耀表示，对于冈比亚的决定，中华民国政府感到震惊与遗憾，且已经透过适当管道传达。
-			</p>
-		</div>
-		<!-- footer -->
-		<div class="m-i-footer">
-			<div class="m-i-f-info">
-				转发39 |  评论119
-			</div>
-			<!-- <div class="m-i-f-btnbox">
-				<div class="m-i-f-b-info">
-					转发39 |  评论119
-				</div>
-				<div class="m-i-f-b-btns">
-					<div class="m-i-f-b-b-like">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-heart"></span>
-						</span>
-						喜欢
-					</div>
-					<div class="m-i-f-b-b-reponse">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-share-alt"></span>
-						</span>
-						回复
-					</div>
-					<div class="m-i-f-b-b-retweet">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-retweet"></span>
-						</span>
-						转发
-					</div>
-					<div class="m-i-f-b-b-more">
-						<span class="m-i-f-b-b-icon">
-							<span class="glyphicon glyphicon-plus"></span>
-						</span>
-						更多
-					</div>
-				</div>
-			</div> -->
-		</div>
-	</div>
+	<a href="ajax/detail.html" class="microblog-list-a" data-persist-ajax="true" title="detail"><div class="microblog-item"><div class="media m-i-header"><div class="pull-left m-i-h-avatar"><img class="media-object m-i-h-a-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC"></div><div class="media-body m-i-h-info"><div class="m-i-h-i-l-name">蜂畀</div><div class="m-i-h-i-l-description">来自Android客户端 下午4:13</div></div><div class="m-i-h-right"><div class="m-i-h-i-r-digg" num="0"><span class="glyphicon glyphicon-thumbs-up"></span><span class="m-i-h-i-d-num">0</span></div></div></div><div class="m-i-body"><p class="m-i-b-p" style="margin:15px 20px 10px 20px;">iPhone 5s 在软件上推出了图像防抖技术，而下一代的 iPhone 在这方面的优化则可能用的是硬件。近日苹果的一份专利被通过，这份专利描述了一种光学图像防抖（OIS）和自动对焦（AF）技术集成在微型摄像头组件中的技术，适合在 iOS 设备中使用。</p></div><div class="m-i-footer"><div class="m-i-f-info">转发39 | 评论119</div></div></div></a>
+
+	<a href="ajax/detail.html" class="microblog-list-a" data-persist-ajax="true" title="detail"><div class="microblog-item"><div class="media m-i-header"><div class="pull-left m-i-h-avatar"><img class="media-object m-i-h-a-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC"></div><div class="media-body m-i-h-info"><div class="m-i-h-i-l-name">蜂畀</div><div class="m-i-h-i-l-description">来自Android客户端 下午4:13</div></div><div class="m-i-h-right"><div class="m-i-h-i-r-digg" num="0"><span class="glyphicon glyphicon-thumbs-up"></span><span class="m-i-h-i-d-num">0</span></div></div></div><div class="m-i-body"><p class="m-i-b-p" style="margin:15px 20px 10px 20px;">在 CES 上，雅虎 CEO Marissa Mayer 公布了“Yahoo 智能电视”计划，但 Yahoo 并非要推出新型电视产品，而是把应用植入其他公司的电视导航菜单，类似 Netflix 和 Hulu。</p></div><div class="m-i-footer"><div class="m-i-f-info">转发39 | 评论119</div></div></div></a>
+
+	<a href="ajax/detail.html" class="microblog-list-a" data-persist-ajax="true" title="detail"><div class="microblog-item"><div class="media m-i-header"><div class="pull-left m-i-h-avatar"><img class="media-object m-i-h-a-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC"></div><div class="media-body m-i-h-info"><div class="m-i-h-i-l-name">蜂畀</div><div class="m-i-h-i-l-description">来自Android客户端 下午4:13</div></div><div class="m-i-h-right"><div class="m-i-h-i-r-digg" num="0"><span class="glyphicon glyphicon-thumbs-up"></span><span class="m-i-h-i-d-num">0</span></div></div></div><div class="m-i-body">
+		<img src="img/microblog/03.jpg" style="width:100%;">
+		<p class="m-i-b-p" style="margin:15px 20px 10px 20px;">克里特岛国王米诺斯在战争中打败了雅典。他要求雅典人每九年（亦传每年）奉祭七名少年七名少女给怪物米诺陶洛斯。轮到第三次奉祭时，雅典国王埃勾斯的儿子忒修斯自告奋勇要去杀死那个怪物。他和父亲埃勾斯约定，当他的船回航时若成功则挂白帆。去到后克里特王弥诺斯的女儿阿里阿德涅对忒修斯一见钟情，她给了他一把剑和一个线球。忒修斯捏住线头进入迷宫，用剑杀死弥诺陶罗斯后循线而返抱得美人归。殊不知在回航路上阿里阿德涅被酒神戴奥尼索斯在纳克索斯岛抢走。不知情的阿里阿德涅诅咒忒修斯，于是忒修斯忘记挂上白帆，埃勾斯以为忒修斯失败身亡，悲痛之下堕下海岸而死，从此这片海域就被称为爱琴海。</p>
+	</div><div class="m-i-footer"><div class="m-i-f-info">转发39 | 评论119</div></div></div></a>
+
+
 </div>
 <script type="text/javascript">
 	$.ui.scrollingDivs['main'].addPullToRefresh();//enable pull to refresh
